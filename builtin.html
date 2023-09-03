@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    (function () {
+            let jsString = 'Text' //неверно - new String('Text')
+            let jsNumber = 125000  //неверно - new Number(125000)
+            let lsBoolean = true  //неверно - new Boolean( true )
+
+            let jsObject = {firstName: 'Mike', lastname:'McGrath'}
+            let jsDate = new Date()
+            let jsArray = [1,2,3]
+            let jsRegExp = /ineasysteps/i
+            let jsMath = Math
+            let jsError = new Error('Error!')
+
+            console.log('Date Object:' + jsDate)
+            console.log('Local Date String:' + jsDate.toLocaleString())
+        }
+    )()
+</script>
+</body>
+</html>
