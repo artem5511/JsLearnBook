@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    (function () {
+let car = {
+    make: 'Jeep',
+    model: 'Wrangler',
+
+    accelerate: function () {
+return this.model + ' drives away'
+    },
+    brake: function (){
+        return this.make+ ' pulls up'
+    }
+}
+            console.log('Car is a ' + car.make + ' ' + car['model'])
+            console.log(car.accelerate())
+            console.log(car.brake())
+        }
+    )()
+</script>
+</body>
+</html>
