@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<embed id="svgDoc" src="banner.svg" type="image/svg+xml" width="500" height="70">
+<br>
+<input ud="htmlTxt" size="50">
+<button id="htmlBtn">Send To SVG Document</button>
+<body>
+    <script>
+      function loadSVG() {
+          const svgDoc =document.getElementById('svgDoc').getSVGDocument()
+          const svgTxt = svgDoc.getElementById('svgTxt')
+          const svgBtn = svgDoc.getElementById('svgBtn')
+          const htmTxt = svgDoc.getElementById('htmTxt')
+          const htmBtn = svgDoc.getElementById('htmBtn')
+
+          htmBtn.addEventListener('click', function (){
+              svgTxt.lastChild.replaceWith(htmTxt.value)
+              htmTxt.value=''
+          })
+
+          svgBtn.addEventListener('click',function (){
+              htmTxt.value = svgTxt.lastChild.wholeText
+              svgTxt.lastChild.replaceWith('SVG Text')
+          })
+
+      }
+      onload = loadSVG
+</script>
+</body>
+</html>
