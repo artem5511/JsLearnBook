@@ -36,7 +36,7 @@
                 document.getElementById('legend').innerText='Enter Data';return false}else{
                 document.getElementById('legend').innerText=
                     localStorage.getItem('Is_data')+'Is Removed'
-                localStorage.remove('Is_data')
+                localStorage.removeItem('Is_data')
                 document.getElementById('data').value=''
             }
         }
